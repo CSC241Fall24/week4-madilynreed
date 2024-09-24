@@ -20,7 +20,17 @@ public class Problem2 {
         }
 
         // insert at end
-        if (current == null) {
+        if (current == null) { 
+            if (head == null) {
+                return newNode;
+            }
+
+            current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+
+            current.next = newNode;
             return head;
         }
 
